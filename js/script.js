@@ -205,3 +205,36 @@ L.DivIcon.extend({
         iconSize: [30, 30]
     }
 });
+
+// Мобильная оптимизация
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+}
+
+// Инициализация мобильных улучшений
+if (isMobile()) {
+    // Крупные маркеры
+    map.eachLayer(function(layer) {
+        if (layer instanceof L.CircleMarker) {
+            layer.setRadius(18);
+        }
+    });
+    
+    // Touch события
+    map.on('touchstart', function() {
+        document.body.style.overflow = 'hidden';
+    });
+    
+    map.on('touchend touchcancel', function() {
+        document.body.style.overflow = 'auto';
+    });
+}
+
+// Мобильный оверлей
+const mobileOverlay = document.getElementById('mobileOverlay');
+if (mobileOverlay) {
+    mobileOverlay.addEventListener('click', () => {
+        infoPanel.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+    });
+}
