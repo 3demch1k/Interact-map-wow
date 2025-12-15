@@ -2,15 +2,11 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>🗺️ Ключевые битвы Великой Отечественной войны 1941-1945</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивная карта: Великая Отечественная война 1941-1945</title>
     
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
-          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
-          crossorigin=""/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     
     <!-- Наши стили -->
     <link rel="stylesheet" href="css/style.css">
@@ -18,8 +14,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>🗺️ Ключевые битвы Великой Отечественной войны</h1>
-            <p class="subtitle">1941–1945 гг. | Интерактивная карта с временной шкалой</p>
+            <h1>Ключевые битвы Великой Отечественной войны</h1>
+            <p class="subtitle">1941-1945 гг.</p>
         </header>
 
         <div class="main-content">
@@ -28,11 +24,11 @@
 
             <!-- Боковая панель с информацией -->
             <aside class="info-panel" id="infoPanel">
-                <button class="close-btn" id="closeBtn" aria-label="Закрыть">×</button>
+                <button class="close-btn" id="closeBtn">&times;</button>
                 <div class="info-content">
                     <h2 id="battleTitle">Выберите битву на карте</h2>
                     <div id="battleInfo">
-                        <p>🔍 Нажмите на маркер или используйте временную шкалу снизу для просмотра битв</p>
+                        <p>Нажмите на маркер на карте, чтобы узнать подробности о сражении.</p>
                     </div>
                 </div>
             </aside>
@@ -40,42 +36,24 @@
 
         <!-- Легенда -->
         <div class="legend">
-            <h3>📊 Этапы войны</h3>
+            <h3>Этапы войны</h3>
             <div class="legend-item">
                 <span class="legend-color" style="background-color: #ff4444;"></span>
-                <span>🔴 Оборонительный этап (1941-1942)</span>
+                <span>Оборонительный этап (1941-1942)</span>
             </div>
             <div class="legend-item">
                 <span class="legend-color" style="background-color: #ffa500;"></span>
-                <span>🟠 Коренной перелом (1942-1943)</span>
+                <span>Коренной перелом (1942-1943)</span>
             </div>
             <div class="legend-item">
                 <span class="legend-color" style="background-color: #44ff44;"></span>
-                <span>🟢 Наступательный этап (1943-1945)</span>
+                <span>Наступательный этап (1943-1945)</span>
             </div>
         </div>
-
-        <!-- Инструкция -->
-        <div class="instructions">
-            <h3>🎮 Как пользоваться картой</h3>
-            <ul>
-                <li>Перетаскивайте слайдер времени внизу карты</li>
-                <li>Нажимайте кнопку Play для автопроигрывания</li>
-                <li>Кликайте/тапайте по маркерам для подробной информации</li>
-                <li>Масштабируйте карту пальцами (на мобильных) или колесиком мыши</li>
-            </ul>
-        </div>
-
-        <!-- Footer -->
-        <footer>
-            <p>Образовательный проект для школьников и студентов | GitHub Pages 2025</p>
-        </footer>
     </div>
 
     <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
-            crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
     <!-- Наш скрипт -->
     <script src="js/script.js"></script>
