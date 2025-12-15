@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>🗺️ Ключевые битвы Великой Отечественной войны 1941-1945</title>
     
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    
-    <!-- Leaflet Timeline CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.timeline@0.1.3/dist/leaflet.timeline.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
     
     <!-- Наши стили -->
     <link rel="stylesheet" href="css/style.css">
@@ -30,11 +28,11 @@
 
             <!-- Боковая панель с информацией -->
             <aside class="info-panel" id="infoPanel">
-                <button class="close-btn" id="closeBtn">×</button>
+                <button class="close-btn" id="closeBtn" aria-label="Закрыть">×</button>
                 <div class="info-content">
                     <h2 id="battleTitle">Выберите битву на карте</h2>
                     <div id="battleInfo">
-                        <p>🔍 Нажмите на маркер или используйте временную шкалу снизу</p>
+                        <p>🔍 Нажмите на маркер или используйте временную шкалу снизу для просмотра битв</p>
                     </div>
                 </div>
             </aside>
@@ -45,7 +43,7 @@
             <h3>📊 Этапы войны</h3>
             <div class="legend-item">
                 <span class="legend-color" style="background-color: #ff4444;"></span>
-                <span>🔴 Оборонительный (1941-1942)</span>
+                <span>🔴 Оборонительный этап (1941-1942)</span>
             </div>
             <div class="legend-item">
                 <span class="legend-color" style="background-color: #ffa500;"></span>
@@ -53,27 +51,31 @@
             </div>
             <div class="legend-item">
                 <span class="legend-color" style="background-color: #44ff44;"></span>
-                <span>🟢 Наступательный (1943-1945)</span>
+                <span>🟢 Наступательный этап (1943-1945)</span>
             </div>
         </div>
 
         <!-- Инструкция -->
         <div class="instructions">
-            <h3>🎮 Как пользоваться</h3>
+            <h3>🎮 Как пользоваться картой</h3>
             <ul>
-                <li>Перетаскивайте слайдер времени ⏯️</li>
-                <li>Нажимайте Play для автопроигрывания</li>
-                <li>Кликайте/тапайте по маркерам для подробностей</li>
-                <li>Масштабируйте карту пальцами или колесиком</li>
+                <li>Перетаскивайте слайдер времени внизу карты</li>
+                <li>Нажимайте кнопку Play для автопроигрывания</li>
+                <li>Кликайте/тапайте по маркерам для подробной информации</li>
+                <li>Масштабируйте карту пальцами (на мобильных) или колесиком мыши</li>
             </ul>
         </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Образовательный проект для школьников и студентов | GitHub Pages 2025</p>
+        </footer>
     </div>
 
     <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    
-    <!-- Leaflet Timeline JS -->
-    <script src="https://unpkg.com/leaflet.timeline@0.1.3/dist/leaflet.timeline.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" 
+            crossorigin=""></script>
     
     <!-- Наш скрипт -->
     <script src="js/script.js"></script>
